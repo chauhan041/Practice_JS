@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check for palindrome String</title>
+    <script>
+        // program to check if the string is palindrome or not
+
+        function checkPalindrome1() {
+            // take input
+            const string = prompt('Enter a string: ');
+
+            // find the length of a string
+            const len = string.length;
+
+            let h3 = document.querySelector("h3");
+
+            // loop through half of the string
+            for (let i = 0; i < len / 2; i++) {
+
+                // check if first and last string are same
+                if (string[i] !== string[len - 1 - i]) {
+                    console.log('It is not a palindrome');
+                    return h3.innerHTML = 'It is not a palindrome';
+                }
+            }
+            console.log('It is a palindrome');
+            return h3.innerHTML = 'It is a palindrome';
+        }
+
+        // function using array methods
+        function checkPalindrome2() {
+            // take input
+            const string = prompt('Enter a string: ');
+
+            // convert string to an array
+            const arrayValues = string.split('');
+
+            // reverse the array values
+            const reverseArrayValues = arrayValues.reverse();
+
+            // convert array to string
+            const reverseString = reverseArrayValues.join('');
+
+            let h3 = document.querySelector("h3");
+            
+            if (string == reverseString) {
+                console.log('It is a palindrome');
+                return h3.innerHTML = 'It is a palindrome';
+            } else {
+                console.log('It is not a palindrome');
+                return h3.innerHTML = 'It is not a palindrome';
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector("#button1").onclick = checkPalindrome1;
+            document.querySelector("#button2").onclick = checkPalindrome2;
+        });
+    </script>
+</head>
+
+<body>
+    <h3></h3>
+    <button id="button1">Check for palindrome using loop</button>
+    <p></p>
+    <button id="button2">Check for palindrome builtin function</button>
+
+</body>
+
+</html>
