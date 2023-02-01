@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS cheatsheet</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            color: #515151;
+            font-family: 'Nunito', 'Roboto', 'Arial', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.01rem;
+            line-height: 1.5;
+        }
+
+        .ibpage .image.image_resized {
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 100%;
+        }
+
+        .ibpage .image {
+            text-align: center;
+            margin-bottom: 1.6rem;
+        }
+
+        .ibpage .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        pre {
+            display: block;
+            padding: 9.5px;
+            margin: 0 0 10px;
+            font-size: 13px;
+            line-height: 1.42857143;
+            word-break: break-all;
+            word-wrap: break-word;
+            color: #333333;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .ibpage pre {
+            border: 0.1rem solid #cdd5e4;
+            background-color: #f5f8ff;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            text-align: left;
+            font-size: 1.4rem;
+        }
+
+        .ibpage p {
+            color: #373e3f;
+            font-size: 1.6rem;
+            margin: 0 0 2rem;
+        }
+
+        .ibpage code {
+            padding: 0.5rem 1rem;
+            text-align: left;
+            font-size: 1.4rem;
+        }
+
+        .ibpage p>code,
+        .ibpage li>code {
+            border: 0.1rem solid rgba(29, 28, 29, 0.13);
+            border-radius: 0.3rem;
+            background-color: rgba(29, 28, 29, 0.04);
+            color: #e01e5a;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .ibpage table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        .ibpage table {
+            margin: 0 auto;
+        }
+
+        .ibpage tr:nth-child(odd) {
+            background-color: #f2f6fd;
+        }
+
+        .ibpage th {
+            border: 0.1rem solid #555;
+            background-color: #cdd5e4;
+            padding: 0.6rem 2rem;
+            text-align: left;
+            white-space: nowrap;
+            vertical-align: middle;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .ibpage td {
+            border: 0.1rem solid #555;
+            padding: 0.6rem 2rem;
+            text-align: left;
+            white-space: normal;
+        }
+
+        .ibpage tr:nth-child(even) {
+            background-color: #e4eeff;
+        }
+
+        a {
+            color: inherit;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .ibpage a {
+    color: #0b65bf;
+}
+        a:visited,
+        a:hover,
+        a:active {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="ibpage">
+        <article>
+            <p><strong>INTRODUCTION TO CSS</strong></p>
+            <p>To specify formatting within an HTML document (fonts, layout, background, colours, etc. ), authors have
+                to apply separate tags to different parts to format. The term CSS pertains to <a
+                    href="https://www.interviewbit.com/css-interview-questions/" target="_blank"
+                    rel="noopener noreferrer"><strong>Cascading Style Sheets</strong></a>, which are used to specify
+                your document's style. While <a href="https://www.interviewbit.com/html-cheat-sheet/" target="_blank"
+                    rel="noopener noreferrer"><strong>HTML</strong></a> is utilized for structuring a web page (the
+                headlines and paragraphs, as well as the ability to include images, video, and other elements), CSS
+                specifies your page layout, colours, and fonts. <strong>CSS</strong> is used to bring style to your web
+                pages.</p>
+            <p><strong>TYPES OF CSS:&nbsp;</strong></p>
+            <p>There are 3 <a href="https://www.interviewbit.com/blog/types-of-css/" target="_blank"
+                    rel="noopener noreferrer"><strong>types of CSS</strong></a>&nbsp;</p>
+            <ol>
+                <li>External CSS</li>
+                <li>Internal CSS</li>
+                <li>Inline CSS</li>
+            </ol>
+            <p><strong>1. External CSS</strong>: For using an external style sheet, your .html files need to include a
+                header section that links to an external style sheet. Since the CSS code is in a separate document, your
+                HTML files will have a cleaner structure and are smaller in size.</p>
+            <p>You can use the same .css file for multiple pages.</p>
+            <p>For example:</p>
+            <pre><code class="language-css hljs">&lt;head&gt;
+&lt;link rel=”stylesheet”  type=”text/css”  href=mysitestyle<span class="hljs-selector-class">.css</span>”&gt;
+&lt;/head&gt;</code></pre>
+            <p><strong>2. Internal CSS: </strong>These CSS instructions are written directly into the header of a
+                specific .html page. This CSS style is an effective method of styling a single page.</p>
+            <p>For example:</p>
+            <pre><code class="language-css hljs">&lt;head&gt;
+&lt;style&gt;
+<span class="hljs-selector-tag">Body</span>  {  <span class="hljs-attribute">background-color</span>:thistle;  }
+<span class="hljs-selector-tag">P</span>  {  <span class="hljs-attribute">font-size</span>:<span class="hljs-number">20px</span>;  <span class="hljs-attribute">color</span>:mediumblue;  }
+&lt;/style&gt;
+&lt;/head&gt;</code></pre>
+            <p><strong>3. Inline CSS:</strong> Lastly, inline styles are CSS blocks that are written directly into a
+                single instance of HTML code.</p>
+            <p>For example:</p>
+            <pre><code class="language-css hljs">&lt;<span class="hljs-selector-tag">h1</span>  style=”<span class="hljs-attribute">font-size</span>:<span class="hljs-number">55px</span>;<span class="hljs-attribute">color</span>:orange;”&gt;Check out this headline!&lt;/<span class="hljs-selector-tag">h1</span>&gt;</code></pre>
+            <blockquote>
+                <p>The most efficient way of implementing CSS on a website is to use external style sheets, whereas
+                    internal style sheets and inline styles are suitable for case-by-case changes.</p>
+            </blockquote>
+            <p><strong>What is CSS Syntax?</strong></p>
+            <p>CSS syntax is relatively simple. Various attributes, such as font size and background colour, are
+                assigned values within the brackets following the name of the element to style, called the CSS selector.
+            </p>
+            <p><strong>What are CSS Selectors?</strong></p>
+            <p>A CSS property value pattern is a pattern of elements, such as HTML elements, that instruct the browser
+                which elements to select when applying the CSS property values.</p>
+        </article>
+        <div id="learn-css">
+            <h2>Learn CSS: Basics to Advanced Concepts</h2>
+
+            <section class="ibpage-article-header" id="css-selectors">
+                <h3>1. CSS Selectors</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMAND</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>UNIVERSAL SELECTOR</th>
+                                    <td>The CSS <strong>universal selector (*)</strong> matches elements of any type.
+                                        When utilising @namespace, universal selectors can be namespaced.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">{}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>ID SELECTOR</th>
+                                    <td>The CSS<strong> ID selector </strong>matches an element based on the value of
+                                        the element’s id attribute. This is what you'd use to refer to that
+                                        one-of-a-kind element with an id.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">id {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>CLASS SELECTOR</th>
+                                    <td>The CSS<strong> class selector</strong> matches elements based on the contents
+                                        of their class.&nbsp;</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-class">.class</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>TYPE SELECTOR</th>
+                                    <td>It selects all elements of the given type within a document. In other words, the
+                                        type selector in CSS matches components based on their node names.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span> ,<span class="hljs-selector-tag">h3</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>ADJACENT SIBLING SELECTOR</th>
+                                    <td>The <strong>adjacent sibling combinator</strong> (+) separates two selectors. It
+                                        comes right after the first element, and they're both children of the same
+                                        parent.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">h1</span> + <span class="hljs-selector-tag">p</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>CHILD SELECTOR</th>
+                                    <td>The <strong>child combinator</strong> (&gt;) is placed between two CSS
+                                        selectors.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">ul</span> &gt; <span class="hljs-selector-tag">li</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>GENERAL SIBLING SELECTOR</th>
+                                    <td>Select all elements that follow the first element such that both are children of
+                                        the same parent.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">h1</span> ~ <span class="hljs-selector-tag">p</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>DESCENDANT SELECTOR</th>
+                                    <td>Any selector with white space between two selectors without a combinator.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">a</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                    <figure class="image image_resized" style="width:75%;"><img
+                            data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/098/original/Css_selectors.png?1650595913"
+                            class=""
+                            src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/098/original/Css_selectors.png?1650595913">
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="pseudo-classes-and-pseudo-elements">
+                <h3>2. Pseudo-classes and Pseudo-elements</h3>
+                <article class="ibpage-article">
+                    <p>A pseudo-class is used to define a special state of an element. A CSS pseudo-element is used to
+                        style specified parts of an element.</p>
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMANDS</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Mouse over selector</th>
+                                    <td>Triggered when the user hovers over an element with the cursor. You can use the
+                                        hover selection to target an element that a user hovers over with their cursor.
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Active Link Selector</th>
+                                    <td>The :active pseudo-class is commonly used on &lt;a&gt; and &lt;button&gt;
+                                        elements. When a link is clicked, you can provide a style for it with this
+                                        selector.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:active</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Focus Selector</th>
+                                    <td>Triggered when the user clicks or taps on an element or selects it with the
+                                        keyboard's Tab key.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Visited Links Selector</th>
+                                    <td>Represents that the link has already been visited. Its styles for URLs that the
+                                        user has already visited are defined.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-pseudo">:visited</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Link Selector&nbsp;</th>
+                                    <td>This represents that the link has not yet been visited.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-class">.class</span><span class="hljs-selector-pseudo">:link</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Checked selector element</th>
+                                    <td>Represents radio, checkbox, or option element that is checked or toggled to an
+                                        on-state. When the page loads, it specifies that an &lt;input&gt; element should
+                                        be already selected (checked).</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:checked</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Disabled elements selector</th>
+                                    <td>An element is disabled. It represents that the element is currently disabled, To
+                                        pick the disabled element, the :disabled selector is used.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:disabled</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Enabled elements selector</th>
+                                    <td>An element is enabled. It represents that the element is currently available.
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:enabled</span> {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Not a Specified Element Selector</th>
+                                    <td>Represents elements that do not match a list of selectors.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">:not(p) {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>First Line Selector</th>
+                                    <td>Applies styles to the first line of a block-level element. It is used in the
+                                        first line of an element to style it.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">p::first-line {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>First Letter Selector</th>
+                                    <td>Applies styles to the first letter of the first line. The style is applied to
+                                        the first letter of the first line of a block-level element if it is not
+                                        preceded by other content.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">::first-letter {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>First Child Selector</th>
+                                    <td>Represents the first element among a group of sibling elements. It is used to
+                                        find all elements that are children of a given element.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">:first-child {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Last Child Selector</th>
+                                    <td>Represents the last. It indicates the last sibling element in a collection of
+                                        siblings.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">:last-child {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Only Child Selector</th>
+                                    <td>Represents an element without any siblings. You can use the CSS:only-child
+                                        selector to target an element which is the only child of its parent.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">:only-child {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>:nth-child Selector</th>
+                                    <td>Matches elements based on their position.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">:nth-child()</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>First Element of its Parent Selector&nbsp;</th>
+                                    <td>Represents the first element. In CSS, you may use the:first-of-type selector to
+                                        target an element's first appearance within the container.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">P:first-of-type {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Elements that have no Children Selector</th>
+                                    <td>Represents any element that has no children. Any element with no children is
+                                        represented by this. Either element nodes or text can be children.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">p:empty {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Before Element</th>
+                                    <td>Used to add cosmetic content to an element with the content property.The::before
+                                        pseudo-element is used to define created stuff that comes before the content of
+                                        an element.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">class::before {}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>After Element</th>
+                                    <td>Used to add cosmetic content to an element with the content propertyThe::after
+                                        pseudo-element is used to define created stuff that comes after the content of
+                                        an element.</td>
+                                    <td>
+                                        <pre><code class="language-plaintext hljs">.class::after {}</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="css-text-styling">
+                <h3>3. CSS Text Styling</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMAND</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Font style</th>
+                                    <td>It sets the font style. We can set our text as normal, bold, italic, oblique as
+                                        per our requirement</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">font-style</span>: normal | italic | oblique</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Font Variant</th>
+                                    <td>It sets the font variation. We can set the variant of the font as uppercase or
+                                        lowercase, small-caps etc as per required by the user.&nbsp;</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">font-variant</span>: normal | small-caps</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Font Weight</th>
+                                    <td>Sets the font weight. It helps us to set the weight of the font as normal, bold,
+                                        &nbsp;bolder lighter and we can also set it in numerics.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">font-weight</span>: normal | bold | bolder | lighter | <span class="hljs-number">100</span> - <span class="hljs-number">900</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Vertical Alignment</th>
+                                    <td>Sets the alignment i.e. where text is shown. It will help to adjust our text
+                                        where it will appear.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">vertical-align</span>: baseline | <span class="hljs-number">10px</span> | sub | super | top | text-top | middle | bottom | text-bottom | initial</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Text Transform</th>
+                                    <td>It sets how text is written. It will define the text as uppercase, lowercase or
+                                        capitalized.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">text-transform</span>: capitalise | lowercase | uppercase</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Font Size</th>
+                                    <td>It sets the font size. It helps us to define the size of our font to make our
+                                        web page more attractive.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span> | <span class="hljs-number">0.8em</span> | <span class="hljs-number">80%</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Space Between Characters</th>
+                                    <td>It defines the space between characters. It helps to adjust the spacing between
+                                        two characters.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">letter-spacing</span>: normal | <span class="hljs-number">4px</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Line Height</th>
+                                    <td>It sets the height of the line. It defines the height of the line.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">line-height</span>: normal | <span class="hljs-number">3em</span> | <span class="hljs-number">34%</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Horizontal Alignment</th>
+                                    <td>Sets the horizontal alignment of the content. It helps to align the text
+                                        horizontally whether it is left, right, centre or align.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">text-align</span>: left | right | center | justify</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Text Align Last</th>
+                                    <td>The text-align-last CSS property specifies how the last line of a block or line
+                                        should be oriented before a forced line break.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">text-align-last</span>: auto | left | right | center | justify | start | end | initial | inherit</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Text Decoration</th>
+                                    <td>Text-decoration-line, text-decoration-color, text-decoration-style, and the
+                                        newer text-decoration-thickness are all shorthand for this property.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">text-decoration</span>: none | underline | overline | line-through</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Indent First Line&nbsp;</th>
+                                    <td>The indentation of the initial line in a text block is controlled by the
+                                        text-indent attribute.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"> <span class="hljs-attribute">text-indent</span>: <span class="hljs-number">25px</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Font Family</th>
+                                    <td>Sets the font family of the text by linking the font families from google to the
+                                        HTML.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Open Sans'</span>, sans-serif</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Text Justify</th>
+                                    <td>Specifies the justification method of text when <strong>text-align is set to
+                                            "justify"</strong>.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">text-justify: auto | inter-word | inter-character | none</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Text Overflow</th>
+                                    <td>Sets how hidden overflow content is signalled to the user.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">text-overflow</span>: clip | ellipsis | string | initial | inherit</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Text Shadow</th>
+                                    <td>Sets the shadow of text in any direction.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">text-shadow</span>: h-shadow v-shadow blur-radius color | none | initial | inherit</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                </article>
+            </section>
+
+
+            <section class="ibpage-article-header" id="css-table">
+                <h3>4. CSS Table</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMAND</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Adding Borders to Tables</th>
+                                    <td>The CSS border property is the best way to define the borders for the tables.
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Adjusting spacing inside Tables</th>
+                                    <td>You may easily use the CSS padding property to provide additional space between
+                                        the table cell contents and the cell borders.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">th</span>, <span class="hljs-selector-tag">td</span> {<span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Setting Table Width and Height</th>
+                                    <td>The width and height CSS properties can also be used to specify the table's
+                                        width and height, as well as the width and height of its cells.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">table</span> {<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;}  |  <span class="hljs-selector-tag">th</span> {<span class="hljs-attribute">height</span>: <span class="hljs-number">40px</span>;}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Controlling table layout</th>
+                                    <td>This property specifies the layout algorithm for table cells, rows, and columns.
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-css hljs"> <span class="hljs-selector-tag">table</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>; <span class="hljs-attribute">table-layout</span>: fixed; }</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Horizontal Alignment of Cell Contents</th>
+                                    <td>You may use the text-align property in the same manner you do with other
+                                        components to position text inside table cells horizontally.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">th</span> {<span class="hljs-attribute">text-align</span>: left;}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Vertical Alignment of Cell Contents</th>
+                                    <td>Similarly, you may use the CSS vertical-align property to align the content
+                                        inside the th&gt; and td&gt; elements to the top, bottom, or center.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">th</span> {<span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>; <span class="hljs-attribute">vertical-align</span>: bottom;}</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Making a Table Responsive</th>
+                                    <td>Tables aren't naturally responsive. You may add responsiveness to your tables by
+                                        allowing horizontal scrolling on tiny displays to support mobile devices. Simply
+                                        enclose your table in a div&gt; element and use the overflow-x: auto; style.
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-css hljs">&lt;<span class="hljs-selector-tag">div</span> style="<span class="hljs-attribute">overflow-x</span>: auto;"&gt; 
+            &lt;<span class="hljs-selector-tag">table</span>&gt;
+                ... <span class="hljs-selector-tag">table</span> <span class="hljs-attribute">content</span> ...
+            &lt;/<span class="hljs-selector-tag">table</span>&gt;
+        &lt;/<span class="hljs-selector-tag">div</span>&gt;</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="css-position">
+                <h3>5. CSS Position</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMAND</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Position</th>
+                                    <td>Set the position of the elements in a document.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">position</span>: static | relative | absolute | fixed | sticky</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Position Properties</th>
+                                    <td>Defines the position of an element in a document.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">top</span> | <span class="hljs-attribute">right</span> | <span class="hljs-attribute">bottom</span> | <span class="hljs-attribute">left</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Float Element</th>
+                                    <td>Defines the position of an element in a document text and inline elements to
+                                        wrap around.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">float</span>: left | right | none</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Clear Floating Elements</th>
+                                    <td>Whether an element must be moved below (cleared) floating elements that precede
+                                        it.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">clear</span>: none | left | right | both</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Z Index</th>
+                                    <td>Sets overlapping elements with a larger z-index cover those with a smaller one.
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">z-index</span>: <span class="hljs-number">3</span> | auto | inherit</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                    <figure class="image image_resized" style="width:75%;"><img
+                            data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/099/original/CSS_position.png?1650614699"
+                            class=""
+                            src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/099/original/CSS_position.png?1650614699">
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="css-background">
+                <h3>6. CSS Background</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMANDS</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Background Image</th>
+                                    <td>Sets the background image in a div. An element's background-image attribute
+                                        specifies one or more background images.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>()</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Background Repeat</th>
+                                    <td>Sets whether the background is to be repeated or not, in other words, it
+                                        determines whether or not the background picture will be repeated.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">background-repeat</span>: repeat-x | repeat-y | repeat | space | round | no-repeat</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Background Attachment</th>
+                                    <td>Sets the background image scroll or fixed. CSS's background-attachment attribute
+                                        controls how the background moves in relation to the viewport.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">background-attachment</span>: scroll | fixed | local | initial | inherit</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Background Color&nbsp;</th>
+                                    <td>Set the background colour of the div or container.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">background-color</span>: <span class="hljs-number">#2AA9E0</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Background Position</th>
+                                    <td>Sets the position of the background.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">background-position</span>: top | right | bottom | left | center</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Background Opacity</th>
+                                    <td>The opacity property specifies the opacity/transparency of an element. It can
+                                        take a value from 0.0 - 1.0. The lower value, the more transparent it is.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">div</span> {<span class="hljs-attribute">background-color</span>: green; and <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.3</span>};</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                    <p>Different properties and how it works:</p>
+                    <figure class="image image_resized" style="width:75%;"><img
+                            data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/115/original/CSS_Background.jpg?1650625347"
+                            class=""
+                            src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/115/original/CSS_Background.jpg?1650625347">
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="css-box-model">
+                <h3>7. CSS Box Model</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMAND</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Box Sizing</th>
+                                    <td>Sets the width and height of the box. Building CSS layouts with the box-sizing
+                                        property may be a lot more straightforward.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">box-sizing</span>: border-box | content-box</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Margin</th>
+                                    <td>Sets the margin from all the sides of the box. This CSS tutorial explains how to
+                                        use the CSS property called margin with syntax and examples.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">margin</span>: <span class="hljs-number">2px</span> <span class="hljs-number">4px</span> <span class="hljs-number">6px</span> <span class="hljs-number">8px</span> | <span class="hljs-number">0</span> auto | inherit</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Padding</th>
+                                    <td>Sets the area inside the box from the content. CSS's box-sizing attribute
+                                        determines how the box model is applied to the element to which it applies.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">padding</span>: <span class="hljs-number">2px</span> <span class="hljs-number">4px</span> <span class="hljs-number">6px</span> <span class="hljs-number">8px</span> | <span class="hljs-number">100%</span> | inherit |</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Border Color&nbsp;</th>
+                                    <td>Sets the colour of the border of the box.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">border-color</span>: <span class="hljs-number">#2AA9E0</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Border Style&nbsp;</th>
+                                    <td>Sets the style of the border.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">border-style</span>: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Border Width</th>
+                                    <td>Sets the width of the border. The width of an element's borders is determined by
+                                        the border-width attribute. The value of this characteristic can range from one
+                                        to four.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">border-width</span>: <span class="hljs-number">10px</span></code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                    <p>For example, in the following code,</p>
+                    <pre><code class="language-css hljs"><span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">Border-radius</span>: <span class="hljs-number">8px</span>:
+        }</code></pre>
+                    <p>The output will look like the below:</p>
+                    <figure class="image image_resized" style="width:50%;"><img
+                            data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/103/original/css_output.png?1650615429"
+                            class=""
+                            src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/103/original/css_output.png?1650615429">
+                    </figure>
+                    <p>For this code&nbsp;</p>
+                    <pre><code class="language-css hljs"><span class="hljs-selector-tag">img</span>{
+             <span class="hljs-attribute">Border-radius</span>: <span class="hljs-number">50px</span>:
+        }</code></pre>
+                    <p>Output for the above code looks like the below:</p>
+                    <figure class="image image_resized" style="width:50%;"><img
+                            data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/105/original/css_output_2.png?1650615505"
+                            class=""
+                            src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/105/original/css_output_2.png?1650615505">
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="css-styling-lists">
+                <h3>8. CSS Styling Lists</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMANDS</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>List Type</th>
+                                    <td>It sets the type of list. The List is of many types. You can select the type of
+                                        list you want to add whether it is an ordered or unordered list.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">list-style-type</span>: disc | circle | square | none</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>List Position</th>
+                                    <td>Sets the position of the list.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">list-style-position</span>: inside | outside</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>List Image</th>
+                                    <td>Sets the background image of the list.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">list-style-image</span>: <span class="hljs-built_in">url</span>()</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="css-flexbox">
+                <h3>9. CSS Flexbox</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMAND</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Flex Direction</th>
+                                    <td>Sets how flex items are placed in the flex container.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">flex-direction</span>: row | row-reverse | column | column-reverse</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Flex Wrap</th>
+                                    <td>Sets whether flex items are forced onto one line or can wrap onto multiple
+                                        lines.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Justify Content</th>
+                                    <td>Defines how the browser distributes space between and around content items.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around | space-evenly</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Align Items</th>
+                                    <td>It sets the align-self value on all direct children as a group.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">gn-items: flex-start | flex-end | center | baseline | stretch</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Align Content</th>
+                                    <td>Sets the distribution of space between and around content.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Order</th>
+                                    <td>Sets the order to lay out an item in a flex or grid container.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">order</span>: <span class="hljs-number">0</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Flex Grow</th>
+                                    <td>It sets the flex-grow factor. Flex-grow is a term that refers to a system that
+                                        allows you to The flex-grow factor of a flex item's main size to be controlled
+                                        by the CSS property flex grow factor.&nbsp;</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">0</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Flex Shrink</th>
+                                    <td>It sets the flex shrink factor of a flex item. The flex-shrink is a method of
+                                        reducing the size of a flexible object The flex-shrink factor of a flex item is
+                                        controlled by the CSS attribute.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Flex Basis</th>
+                                    <td>Sets the size of the content box. The flex-basis is a system that allows you to
+                                        change your mind at any A flex item's initial primary size is determined by a
+                                        CSS attribute. Unless box-sizing is used, it determines the size of the content
+                                        box.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">flex-basis</span>: <span class="hljs-number">3px</span> | auto</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Align Self</th>
+                                    <td>It aligns the item inside the grid area.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">gn-self: auto | flex-start | flex-end | center | baseline | stretch</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                    <p>Let's understand flexbox with an example:</p>
+                    <pre><code class="language-css hljs"> <span class="hljs-selector-tag">Code</span>:
+        .flex-container {
+            display: flex;
+        }</code></pre>
+                    <p>Output: &nbsp;</p>
+                    <figure class="image image_resized" style="width:75%;"><img
+                            data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/111/original/CSS_Flexbox.png?1650617204"
+                            class=""
+                            src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/111/original/CSS_Flexbox.png?1650617204">
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="css-grid">
+                <h3>10. CSS Grid</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMAND</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Grid Template Columns</th>
+                                    <td>Specifies the size of the columns, and how many columns are in a grid layout.
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-css hljs">d-template-<span class="hljs-attribute">columns</span>: <span class="hljs-number">40px</span> <span class="hljs-number">50px</span> auto <span class="hljs-number">50px</span> <span class="hljs-number">40px</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Template Rows</th>
+                                    <td>Specifies the size of the rows in a grid layout.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-template-rows: <span class="hljs-number">25%</span> <span class="hljs-number">100px</span> auto</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Template Areas</th>
+                                    <td>Specifies how to display columns and rows, using named grid items.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-template-areas: <span class="hljs-string">"a b c"</span> | none</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Template</th>
+                                    <td>Property for defining grid columns, rows, and areas.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-template: <span class="hljs-string">"a a a"</span> <span class="hljs-number">20%</span> <span class="hljs-string">"b b b"</span> auto | <span class="hljs-number">100px</span> <span class="hljs-number">1</span>fr / <span class="hljs-number">50px</span> <span class="hljs-number">1</span>fr</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Column Gap</th>
+                                    <td>Sets the size of the gap between columns.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-template: <span class="hljs-string">"a a a"</span> <span class="hljs-number">20%</span> <span class="hljs-string">"b b b"</span> auto | <span class="hljs-number">100px</span> <span class="hljs-number">1</span>fr / <span class="hljs-number">50px</span> <span class="hljs-number">1</span>fr</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Row Gap</th>
+                                    <td>It sets the size of the gap between an element's grid rows. The space between
+                                        rows is known as the row gap. The gap between an element's grid rows is
+                                        controlled by this attribute.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-row-gap: <span class="hljs-number">10px</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Justify Items</th>
+                                    <td>Defines the default justify-self for all items of the box.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">justify-items: start | end | center | stretch</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Align Items</th>
+                                    <td>Sets the align-self value on all direct children as a group.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">align-items</span>: start | end | center | stretch</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Justify Content</th>
+                                    <td>Specifies how the browser distributes space between and around content.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around | space-evenly</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Align Content</th>
+                                    <td>Distribution of space between and around content items.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around | space-evenly</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Auto Columns</th>
+                                    <td>Specifies the size of an implicitly-created grid column track or pattern of
+                                        tracks.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-<span class="hljs-attribute">auto</span>-<span class="hljs-attribute">columns</span>: <span class="hljs-number">100px</span> | max-content | min-content</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Auto Rows</th>
+                                    <td>CSS property specifies the size of an implicitly-created grid row track or
+                                        pattern of tracks.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-<span class="hljs-attribute">auto</span>-rows: <span class="hljs-number">100px</span> | max-content | min-content</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Auto Flow</th>
+                                    <td>Property controls how the auto-placement algorithm works.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-<span class="hljs-attribute">auto</span>-flow: row | column | row dense | column dense</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Column Start</th>
+                                    <td>CSS property specifies a grid item’s start position within the grid column.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-column-start: <span class="hljs-number">2</span> | areaname | span <span class="hljs-number">2</span> | span areaname | auto</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Column End</th>
+                                    <td>Specifies a grid item’s start position within the grid column by contributing a
+                                        line, a span.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-column-end: <span class="hljs-number">2</span> | areaname | span <span class="hljs-number">2</span> | span areaname | auto</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Row Start</th>
+                                    <td>A grid item’s start position within the grid row by contributing a line.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-row-start: <span class="hljs-number">2</span> | areaname | span <span class="hljs-number">2</span> | span areaname | auto</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Row End</th>
+                                    <td>Specifies a grid item’s end position within the grid row by contributing a line.
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-row-end: <span class="hljs-number">2</span> | areaname | span <span class="hljs-number">2</span> | span areaname | auto</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Column&nbsp;</th>
+                                    <td>Specifies a grid item's size and location within a grid column by contributing a
+                                        line.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-column: <span class="hljs-number">3</span> / span <span class="hljs-number">2</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grid Row</th>
+                                    <td>Specifies a grid item’s size and location within the grid row.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">grid-row: <span class="hljs-number">3</span> / span <span class="hljs-number">2</span></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Justify Self&nbsp;</th>
+                                    <td>Sets the way a box is justified inside its alignment container along the
+                                        appropriate axis.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs">justify-self: start | end | center | stretch</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Align Self</th>
+                                    <td>Overrides a grid or flex item's align-items value.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">align-self</span>: start | end | center | stretch</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                    <p>HOW A GIRD LOOKS LIKE:</p>
+                    <figure class="image image_resized" style="width:75%;"><img
+                            data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/112/original/HOW_A_GIRD_LOOKS_LIKE.png?1650617315"
+                            class=""
+                            src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/112/original/HOW_A_GIRD_LOOKS_LIKE.png?1650617315">
+                    </figure>
+                </article>
+            </section>
+            <section class="ibpage-article-header" id="css-content">
+                <h3>11. CSS Content(Dynamic)</h3>
+                <article class="ibpage-article">
+                    <figure class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>COMMAND</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>SYNTAX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>CSS Variable</th>
+                                    <td>Used in other declarations using the var() function.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"> --variable-name: value</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Variable Usage</th>
+                                    <td>Used in other declarations using the var() function.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-selector-tag">var</span>(--variable-name)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Counter Reset</th>
+                                    <td>Create a new counter or reversed counter with the given name on the specified
+                                        element.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">counter-reset</span>: name-of-counter</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Counter Increment</th>
+                                    <td>Increases or decreases the value of a CSS counter by a given.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">counter-increment</span>: name-of-counter</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Counter Dynamic Value</th>
+                                    <td>Adjust the appearance of content based on its location in a document.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">content</span>: <span class="hljs-built_in">counter</span>(name-of-counter)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Attribute Dynamic Value</th>
+                                    <td>Adjust the appearance of content based on its location in a document.</td>
+                                    <td>
+                                        <pre><code class="language-css hljs"><span class="hljs-attribute">content</span>: <span class="hljs-built_in">attr</span>(name-of-attribute)</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+                    <h3>Recommended Resources</h3>
+                    <ul>
+                        <li><a href="https://www.interviewbit.com/html-interview-questions/" target="_blank"
+                                rel="noopener noreferrer">HTML and HTML5 Interview Questions</a></li>
+                        <li><a href="https://www.interviewbit.com/bootstrap-interview-questions/" target="_blank"
+                                rel="noopener noreferrer">Bootstrap Interview Questions</a></li>
+                        <li><a href="https://www.interviewbit.com/css-mcq/" target="_blank"
+                                rel="noopener noreferrer">CSS MCQ with Answers</a></li>
+                        <li><a href="https://www.interviewbit.com/blog/html-css-books/" target="_blank"
+                                rel="noopener noreferrer">Best HTML/CSS Books</a></li>
+                        <li><a href="https://www.interviewbit.com/blog/difference-between-css-and-css3/" target="_blank"
+                                rel="noopener noreferrer">CSS Vs CSS3</a></li>
+                    </ul>
+                </article>
+            </section>
+
+        </div>
+    </article>
+</body>
+
+</html>

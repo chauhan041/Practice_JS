@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            color: #515151;
+            font-family: 'Nunito', 'Roboto', 'Arial', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.01rem;
+            line-height: 1.5;
+        }
+
+        .ibpage .image.image_resized {
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 100%;
+        }
+
+        .ibpage .image {
+            text-align: center;
+            margin-bottom: 1.6rem;
+        }
+
+        .ibpage .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+        .ibpage pre {
+    border: 0.1rem solid #cdd5e4;
+    background-color: #f5f8ff;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    text-align: left;
+    font-size: 1.4rem;
+}
+.ibpage p {
+    color: #373e3f;
+    font-size: 1.6rem;
+    margin: 0 0 2rem;
+}
+.ibpage code {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    font-size: 1.4rem;
+}
+.ibpage p>code, .ibpage li>code {
+    border: 0.1rem solid rgba(29,28,29,0.13);
+    border-radius: 0.3rem;
+    background-color: rgba(29,28,29,0.04);
+    color: #e01e5a;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.ibpage table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.ibpage table {
+    margin: 0 auto;
+}
+.ibpage tr:nth-child(odd) {
+    background-color: #f2f6fd;
+}
+.ibpage th {
+    border: 0.1rem solid #555;
+    background-color: #cdd5e4;
+    padding: 0.6rem 2rem;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.ibpage td {
+    border: 0.1rem solid #555;
+    padding: 0.6rem 2rem;
+    text-align: left;
+    white-space: normal;
+}
+.ibpage tr:nth-child(even) {
+    background-color: #e4eeff;
+}
+
+    </style>
+</head>
+
+<body>
+    <article class="ibpage">
+    <div id="learn-git">
+        <h2>Learn GIT: Basics to Advanced Concepts</h2>
+
+        <section class="ibpage-article-header" id="uses-of-git">
+            <h3>1. Uses of Git</h3>
+            <article class="ibpage-article">
+                <ul>
+                    <li>Git is used to tracking changes in the source code.</li>
+                    <li>Distributed version control tool used for source code management.</li>
+                    <li>Allows multiple developers to work together.</li>
+                    <li>Supports non-linear development because of its thousands of parallel branches.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="features-of-git">
+            <h3>2. Features of Git</h3>
+            <article class="ibpage-article">
+                <ul>
+                    <li>Free and open-source</li>
+                    <li>Tracks history</li>
+                    <li>Supports non-linear development</li>
+                    <li>Creates backup</li>
+                    <li>Scalable</li>
+                    <li>Supports collaboration</li>
+                    <li>Branching is easier</li>
+                    <li>Distributed development.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-workflow">
+            <h3>3. Git WorkFlow</h3>
+            <article class="ibpage-article">
+                <p>The following image shows the <strong>git workflow diagram</strong>:</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/919/original/git_workflow_diagram.png?1638510048"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/919/original/git_workflow_diagram.png?1638510048">
+                </figure>
+                <p>In Git, the workflow is mainly divided into three areas -</p>
+                <ul>
+                    <li>
+                        <strong>Working directory</strong> - This is the area where you modify your existing files.
+                    </li>
+                    <li>
+                        <strong>Staging area (Index)</strong> - In this, the files in your working directory are staged
+                        and snapshots are added.
+                    </li>
+                    <li>
+                        <strong>Git directory or repository</strong> - It is basically where you perform all the changes
+                        that need to be made i.e. perform commits to branch, checkout branch, make changes etc.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="ibpage-article-header" id="install-git">
+            <h3>4. Install Git: Installation in Windows/Linux/Mac OS X</h3>
+            <article class="ibpage-article">
+                <p><strong>Install Git on Windows</strong> -</p>
+                <ul>
+                    <li>Download the latest version of Git from here.</li>
+                    <li>After starting the installer, follow the command on the screen and press Next to complete the
+                        installation.</li>
+                    <li>Open Command Prompt and run the following command to configure Git on your PC using your
+                        username and email.</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">$ git config --global user.name "username" 
+    $ git config --global user.email "user_emails@interviewbit.com"</code></pre>
+                <p>This configures Git on your PC with your username and email.</p>
+                <p><strong>Install Git on Linux -</strong></p>
+                <ul>
+                    <li>You can install Git on Linux using the command <strong>apt-get</strong> :</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">$ sudo apt-get update
+    $ sudo apt-get install git</code></pre>
+                <ul>
+                    <li>Configure your username and email using the following command:</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">$ git config --global user.name "user_name"
+    $ git config --global user.email "user_email@interviewbit.com"</code></pre>
+                <p><strong>Install Git on Mac OS -</strong></p>
+                <ul>
+                    <li>Download the latest version of Git from here.</li>
+                    <li>Open the installer and follow the instructions.</li>
+                    <li>Now since Git is installed, open command line and configure your username and user email.</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">$ git config --global user.name "user_name"
+    $ git config --global user.email "user_email@interviewbit.com"</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-clone">
+            <h3>5. Git Clone</h3>
+            <article class="ibpage-article">
+                <p><strong>git clone</strong> is a command which is used to clone or copy a target repository.</p>
+                <p>The following image shows an illustration of the <strong>git clone</strong> command. Using the
+                    command, a copy of the original repository is created.</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/920/original/git_clone.png?1638510456"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/920/original/git_clone.png?1638510456">
+                </figure>
+                <p><strong>How to clone a repository?</strong></p>
+                <ul>
+                    <li>Open Github and navigate to the target repository which needs to be cloned.</li>
+                    <li>Under the repo name, click on the tab <strong>Clone or Download</strong>.</li>
+                    <li>An option named <strong>Clone with HTTPS</strong> appears.</li>
+                    <li>Copy the <strong>Clone URL</strong>.</li>
+                    <li>Open a command line and use the command: <strong>git clone &lt;repo_URL&gt;</strong>
+                    </li>
+                </ul>
+                <p>In this way, a clone of the target repository can be made.</p>
+                <p><strong>Clone a specific branch from the repository</strong>.</p>
+                <p>A very useful feature of the git clone is that it allows cloning a specific branch of the target
+                    repository without having to clone the entire repository.<br>To clone a specific branch, you need to
+                    use the command -b to specify the branch. The following command is used:</p>
+                <pre><code class="language-plaintext hljs">git clone -b &lt;Branch_name&gt; &lt;Repo_URL&gt;</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-branch">
+            <h3>6. Git Branch</h3>
+            <article class="ibpage-article">
+                <ul>
+                    <li>A branch in Git is used to keep your changes until they are ready.</li>
+                    <li>You can do your work on a branch while the main branch(main) remains stable. After you are done
+                        with your work, you can merge it to the main branch.</li>
+                </ul>
+                <p>For <strong>creating a new branch</strong>, the following command is used :</p>
+                <pre><code class="language-plaintext hljs">git branch &lt;branch_name&gt;</code></pre>
+                <p>For example -</p>
+                <pre><code class="language-plaintext hljs">git branch demo</code></pre>
+                <p>This command creates a new branch named<strong> demo</strong> from the Main branch:</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/924/original/Git_Branch.png?1638510719"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/924/original/Git_Branch.png?1638510719">
+                </figure>
+                <ul>
+                    <li>The diagram shows there is the main branch.</li>
+                    <li>There are two more branches small feature and large feature working separately.</li>
+                    <li>Once the work is complete for the two separate branches, you can merge it into the main branch.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-switch-branch">
+            <h3>7. Git Switch Branch</h3>
+            <article class="ibpage-article">
+                <p>Using the <strong>git checkout</strong> command, we can switch from one branch to another.</p>
+                <p>Command :</p>
+                <pre><code class="language-plaintext hljs">git checkout &lt;branch_name&gt;</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="create-remote-branches">
+            <h3>8. Create Remote Branches</h3>
+            <article class="ibpage-article">
+                <p>Git doesn’t allow creating a new and isolated branch on a remote repository. But, you to make a
+                    branch remote, we can push an existing local branch.</p>
+                <p>The <strong>steps to create a remote branch</strong> is as follows:</p>
+                <ul>
+                    <li>Create a local branch and switch to that branch:</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">git checkout -b &lt;branch_name&gt;</code></pre>
+                <ul>
+                    <li>Push in the local branch:</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">git push -u origin &lt;branch_name&gt;</code></pre>
+                <blockquote>
+                    <p>Note: origin is the default name of remote</p>
+                </blockquote>
+                <p>Now, if someone wants to fetch some information, one can simply run:</p>
+                <pre><code class="language-plaintext hljs">git fetch</code></pre>
+                <pre><code class="language-plaintext hljs">git checkout &lt;branch_name&gt;</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="delete-branches">
+            <h3>9. Delete Branches</h3>
+            <article class="ibpage-article">
+                <p>Once the work is done on a branch and merged with the Main branch, one can delete the branch.</p>
+                <p>The following command is used to <strong>delete branches</strong>:</p>
+                <pre><code class="language-plaintext hljs">git delete -d &lt;branch_name&gt;</code></pre>
+                <blockquote>
+                    <p>Note: This command deletes a copy of the branch, but the original branch can still exist in
+                        remote repositories.</p>
+                </blockquote>
+                <p>To <strong>delete remote branches</strong>, use the following command:</p>
+                <pre><code class="language-plaintext hljs">git push origin --delete &lt;branch_name&gt;</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-checkout">
+            <h3>10. Git Checkout</h3>
+            <article class="ibpage-article">
+                <p>The Git checkout is used to command Git on which branch changes have to be made. Checkout is simply
+                    used to change branches in repositories. It can also be used to restore files.</p>
+                <p>The following image describes the scenario of creating different branches and switching to a brach
+                    when needed, i.e. we can switch from the <strong>main brach</strong> to a different branch and vice
+                    versa.</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/926/original/Git_Checkout.png?1638510991"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/926/original/Git_Checkout.png?1638510991">
+                </figure>
+                <ul>
+                    <li><strong>Git Checkout Branch</strong></li>
+                </ul>
+                <p>To checkout or create a branch, the following command can be used:</p>
+                <pre><code class="language-plaintext hljs">git checkout -b  &lt;branch_name&gt;</code></pre>
+                <p>This will simply switch to the new branch <strong>branch_name</strong>.</p>
+                <ul>
+                    <li><strong>Git Checkout Tag</strong></li>
+                </ul>
+                <p>While working on a large codebase, it because easy to have some reference point. That is where the
+                    <strong>checkout tag</strong> is used.
+                </p>
+                <p>The following command is used to specify the <strong>tagname</strong> as well as the branch that will
+                    be checked out.</p>
+                <pre><code class="language-plaintext hljs">git checkout tag&lt;/tag&gt; &lt;branch_name&gt;</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-status">
+            <h3>11. GIT Status</h3>
+            <article class="ibpage-article">
+                <p><strong>git status</strong> is mainly used to display the state of the staging area and the
+                    repository. It helps us to track all the changes made, point out untracked files.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git status</code></pre>
+                <p><strong>git status after a file is added</strong></p>
+                <ul>
+                    <li>Add files to the repo using the following command:</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">touch file.txt</code></pre>
+                <ul>
+                    <li>Execute git status.</li>
+                    <li>A message would be displayed, describing the changes done to the repository.</li>
+                </ul>
+                <p>git status after a file is deleted after commit</p>
+                <ul>
+                    <li>Delete the file using the following command:</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">git rm file.txt</code></pre>
+                <ul>
+                    <li>Execute <code>git status</code>.</li>
+                    <li>A message would be displayed, describing the file has been deleted.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-commit">
+            <h3>12. Git Commit</h3>
+            <article class="ibpage-article">
+                <p>Git commit is used to record all the changes in the repository. The git commit will commit all the
+                    changes and make a commit-id for the same for tracking down the changes made as shown in the image
+                    below.</p>
+                <p>As shown in the image, the command <strong>git commit</strong> creates a <strong>commit-id</strong>
+                    to track down changes and commits all the changes to the git repository.</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/930/original/Git_commit.png?1638511268"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/930/original/Git_commit.png?1638511268">
+                </figure>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git commit</code></pre>
+                <ul>
+                    <li><strong>git commit -m</strong></li>
+                </ul>
+                <p>The <strong>-m</strong> along with the command lets us write the commit message on the command line.
+                </p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git commit -m "Commit message"</code></pre>
+                <ul>
+                    <li><strong>git commit -am</strong></li>
+                </ul>
+                <p>The <strong>-am</strong> along with the command is to write the commit message on the command line
+                    for already staged files.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git commit -am "Commit message"</code></pre>
+                <ul>
+                    <li><strong>git commit -amend</strong></li>
+                </ul>
+                <p>The<strong> amend</strong> is used to edit the last commit. In case we need to change the last
+                    committed message, this command can be used.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git commit -amend</code></pre>
+                <ul>
+                    <li><strong>git rm</strong></li>
+                </ul>
+                <p><strong>rm</strong> stands for remove. It is used to remove a collection of files. The git rm command
+                    is used to remove or delete files from the working tree and index.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git rm &lt;file_name&gt;</code></pre>
+                <p>Now, if you use the command <strong>git status</strong>, it would show, that the file has been
+                    deleted.</p>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-merge">
+            <h3>13. Git Merge</h3>
+            <article class="ibpage-article">
+                <p>Git merge is a command that allows you to merge branches from Git. It preserves the complete history
+                    and chronological order and maintains the context of the branch.</p>
+                <p>The following image demonstrates how we can create different features by branching from the main
+                    branch and how we can merge the newly created features after the final review to the main branch.
+                </p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/931/original/Git_Merge.png?1638511539"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/931/original/Git_Merge.png?1638511539">
+                </figure>
+                <p>The command <strong>git merge</strong> is used to merge the branches.</p>
+                <p>Command :</p>
+                <pre><code class="language-plaintext hljs">git merge &lt;branch_name&gt;</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-rebase">
+            <h3>14. GIT Rebase</h3>
+            <article class="ibpage-article">
+                <p>Git Rebase is a process of combining a sequence of commits to a new base commit.</p>
+                <ul>
+                    <li>The primary reason for rebasing is to maintain a linear project history.</li>
+                    <li>When you rebase, you ‘unplug’ a branch and ‘replug’ it on the tip of another branch(usually
+                        main).</li>
+                    <li>The goal of rebasing is to take all the commits from a feature branch and put it on the main
+                        branch.</li>
+                </ul>
+                <p>The following <strong>rebase command</strong> is used for rebasing the commits:</p>
+                <pre><code class="language-plaintext hljs">git rebase &lt;branch_name&gt;</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-fetch">
+            <h3>15. Git Fetch</h3>
+            <article class="ibpage-article">
+                <p><strong>Git Fetch</strong> only downloads the latest changes into the local repository. It downloads
+                    fresh changes that other developers have pushed to the remote repository since the last fetch and
+                    allows you to review and merge manually at a later time using <strong>Git Merge</strong>. As it
+                    doesn’t change the working directory or the staging area, it is safe to use.</p>
+                <p>The below illustration shows the working of the command git fetch. It fetches all the latest changes
+                    that have been made in the remote repository and lets us make changes accordingly.</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/933/original/Git_Fetch.png?1638511619"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/933/original/Git_Fetch.png?1638511619">
+                </figure>
+                <p>The command used is :</p>
+                <pre><code class="language-plaintext hljs">git fetch &lt;branch_name&gt;</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-pull-remote-branch">
+            <h3>16. Git Pull Remote Branch</h3>
+            <article class="ibpage-article">
+                <p>You can pull in any changes that have been made from your forked remote repository to the local
+                    repository.</p>
+                <p>As shown in the below image, using the git pull command, all the changes and content can be fetched
+                    from the remote repository and can be immediately updated in the local repository to match the
+                    content.</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/934/original/Git_Pull_Remote_Branch.png?1638511764"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/934/original/Git_Pull_Remote_Branch.png?1638511764">
+                </figure>
+                <p>We can simply pull a remote repository by using the <strong>git pull</strong> command. The syntax is
+                    as follows:</p>
+                <pre><code class="language-plaintext hljs">git pull</code></pre>
+                <p>This command is equivalent to</p>
+                <pre><code class="language-plaintext hljs">git fetch origin head</code></pre>
+                <p>Use the following command to check if there has been any change:</p>
+                <pre><code class="language-plaintext hljs">git pull &lt;RemoteName&gt; &lt;BranchName&gt;</code></pre>
+                <p>If there is no change, it will show “Already up to date”. Else, it will simply merge those changes in
+                    the local repository.</p>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-stash">
+            <h3>17. Git Stash</h3>
+            <article class="ibpage-article">
+                <p>Sometimes in large codebases, there might be some cases when we do not want to commit our code, but
+                    at the same time don’t want to lose the unfinished code. This is where <strong>git stash</strong>
+                    comes into play. The <strong>git stash</strong> command is used to record the current state of the
+                    working directory and index in a stash.</p>
+                <p>It stores the unfinished code in a stash and cleans the current branch from any uncommitted changes.
+                    Now, we can work on a clean working directory.</p>
+                <p>If in the future, we again need to visit that code, we can simply use the stash and apply those
+                    changes back to the working repository.</p>
+                <p>As shown below, using the command <strong>git stash</strong>, we can temporarily stash the changes we
+                    have made on the working copy and can work on something else. Later, when needed, we can <strong>git
+                        stash</strong> pop and again start working on it.</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/937/original/Git_Stash.png?1638511904"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/937/original/Git_Stash.png?1638511904">
+                </figure>
+                <p><strong>How to stash changes in Git?</strong></p>
+                <p>The syntax for stashing is as follows:</p>
+                <pre><code class="language-plaintext hljs">git stash</code></pre>
+                <p>Suppose, you are working on a website and the code is stored in a repository.</p>
+                <p>Now let's say, you have some files named <code>design.css</code> and <code>design.js</code>. Now you
+                    want to stash these files so that you can again use them later, while you work on something else.
+                </p>
+                <p>Therefore, later you can use the <strong>git stash list</strong> command to view all the changes.</p>
+                <p><strong>Drop Stash</strong></p>
+                <p>In case, you no longer require a stash, you can delete it with the following command:</p>
+                <pre><code class="language-plaintext hljs">git stash drop &lt;stash_id&gt;</code></pre>
+                <p>If you want to delete all the stashes, simply use:</p>
+                <pre><code class="language-plaintext hljs">git stash clear</code></pre>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-ignore">
+            <h3>18. Git-Ignore</h3>
+            <article class="ibpage-article">
+                <p>At times, there are some files that we might want Git to ignore while commiting. For example, private
+                    files or folders containing passwords, APIs etc. These files are user-specific and hence, we can
+                    ignore these using the <strong>.gitignore</strong>.</p>
+                <p><strong>.gitignore</strong> is generated automatically inside the project directory and ignores the
+                    files to get committed to the repositories.</p>
+                <p><strong>How to use the .gitignore?</strong></p>
+                <p>Follow the below steps to use add the files you want Git to ignore.</p>
+                <ul>
+                    <li>Open your project directory on your PC.</li>
+                    <li>Create a <strong>.gitignore</strong> file inside it.</li>
+                    <li>Inside the <strong>.gitignore</strong> write the names of all the files you want Git to ignore.
+                    </li>
+                    <li>Now add the .gitignore in your repository.</li>
+                </ul>
+                <p>Now, if you check the status of your repo, you will see, all the files which were written in the
+                    <strong>.gitignore</strong> file have been ignored.
+                </p>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="advanced-git-concepts">
+            <h3>19. Advanced Git Concepts</h3>
+            <article class="ibpage-article">
+                <ul>
+                    <li><strong>git pull --rebase</strong></li>
+                </ul>
+                <p>Git rebase is used to rewrite commits from one branch to another branch. In order to combine
+                    unpublished local changes with the published remote changes, <code>git pull</code> is performed.</p>
+                <p>With <code>git pull --rebase</code>, the unpublished changes will be again applied on the published
+                    changes and no new commit will be added to history.</p>
+                <ul>
+                    <li><strong>git merge --squash</strong></li>
+                </ul>
+                <p>The <strong>squash</strong> along with git merge produces the working tree. It indexes in the same
+                    way as that of the real merge but discards the merge history.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git merge --squash origin/main</code></pre>
+                <p>When to use <strong>git merge --squash</strong>?</p>
+                <ol>
+                    <li>When you have merged main into your branch and resolved conflicts.</li>
+                    <li>When you need to overwrite the original commits.</li>
+                </ol>
+                <ul>
+                    <li><strong>git reflog</strong></li>
+                </ul>
+                <p>The <strong>reflog</strong> records every change that is made in the repository. Apart from this, if
+                    some branch is lost from the repo, the recovery can be done using this command.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git reflog</code></pre>
+                <ul>
+                    <li><strong>git revert</strong></li>
+                </ul>
+                <p><strong>Revert</strong> simply means to undo the changes. Therefore, it is an undo command in Git.
+                    Unlike traditional undo operation, the revert command does not delete any data. git revert is a
+                    commit operation, as it undo the specified commit.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git revert</code></pre>
+                <p><strong>Options:</strong></p>
+                <ul>
+                    <li><strong>Revert commit:</strong></li>
+                </ul>
+                <p>This option is used to revert back a commit.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git revert &lt;commit_id&gt;</code></pre>
+                <ul>
+                    <li><strong>Edit commit message before reverting commit:</strong></li>
+                </ul>
+                <p>In case, we want to edit the commit message before reverting, -e is used for the same.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git revert -e &lt;commit_id&gt;</code></pre>
+                <ul>
+                    <li><strong>git bisect</strong></li>
+                </ul>
+                <p>Git bisect is a git tool used for debugging. Suppose, you have a large codebase and some commit
+                    causes a bug, but you are not sure of which commit causes it.</p>
+                <p>Git bisect goes through all the previous commits and uses binary search to find the bugged commit.
+                </p>
+                <p>The <strong>git bisect</strong> command is used to find the bisect position as shown. It bisects
+                    (divides) your history between the good and the bad commit range. It then moves through every commit
+                    id between this range and at each snapshot it allows you to test the code.</p>
+                <figure class="image image_resized" style="width:75%;"><img
+                        data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/939/original/git_bisect.png?1638512367"
+                        class=""
+                        src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/939/original/git_bisect.png?1638512367">
+                </figure>
+                <p>It is applied as follows:</p>
+                <ul>
+                    <li>
+                        <code>git bisect start</code> - Starts the bisect
+                    </li>
+                    <li>
+                        <code>git bisect good v1.0</code> - Mention the last working commit.
+                    </li>
+                    <li>
+                        <code>git bisect bad</code>- Mentioning that the current commit has a bug.
+                    </li>
+                </ul>
+                <p>It will return the commit which causes the bug and one can debug the issue efficiently.</p>
+                <ul>
+                    <li><strong>git blame</strong></li>
+                </ul>
+                <p>git blame is used to know who/which commit is responsible for the latest changes in the repository.
+                    The author/commit of each line is visible through this.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git blame &lt;file_name&gt;</code></pre>
+                <p>This command shows the commits which are responsible for changes of all lines of code.</p>
+                <ul>
+                    <li><strong>git cherry-pick</strong></li>
+                </ul>
+                <p>Choosing a commit from one branch and applying it to another is known as <strong>cherry
+                        picking</strong> in Git. Following are the steps to <strong>cherry pick</strong> a commit:</p>
+                <ul>
+                    <li>Visit the branch you want to apply to commit and use the following command:</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">git switch master</code></pre>
+                <ul>
+                    <li>Run the following command:</li>
+                </ul>
+                <pre><code class="language-plaintext hljs">git cherry-pick &lt;commit_id</code></pre>
+                <p><strong><u>Git Submodules</u></strong></p>
+                <p>Submodules are a tool that allows attaching an external repository inside another repository at a
+                    specific path. It allows us to keep a git repository as a subdirectory of another git repository.
+                </p>
+                <p>Commands:</p>
+                <ul>
+                    <li>
+                        <strong>Add git submodule: </strong>This takes the git URL as the parameter and clones the
+                        pointer repo as a submodule. The syntax to add git submodule is:
+                    </li>
+                </ul>
+                <pre><code class="language-plaintext hljs">git submodule add &lt;URL_link&gt;</code></pre>
+                <ul>
+                    <li><strong>git submodule init</strong></li>
+                </ul>
+                <p><code>git submodule init</code> is to copy the mapping from .gitmodules file into ./.git/config file.
+                    <code>git submodule init</code> has extend behavior in which it accepts a list of explicit module
+                    names.
+                </p>
+                <p>This enables a workflow of activating only specific submodules that are needed for work on the
+                    repository.</p>
+                <p>Command:</p>
+                <pre><code class="language-plaintext hljs">git submodule init</code></pre>
+                <p><strong><u>Git Subtrees</u></strong></p>
+                <ul>
+                    <li>
+                        <code>git subtree </code>lets you nest one repository inside another as a sub-directory. It is
+                        one of several ways Git projects can manage project dependencies.
+                    </li>
+                    <li>git-subtree is a wrapper shell script to facilitate a more natural syntax. This is actually
+                        still a part of contrib and not fully integrated into git with the usual man pages.</li>
+                    <li>A subtree is just a subdirectory that can be committed to, branched from, and merged along with
+                        your project in any way you want.</li>
+                </ul>
+                <p><strong>Commands:</strong></p>
+                <ul>
+                    <li>
+                        <strong>add:</strong> Let’s assume that you have a local repository that you would like<br>to
+                        add an external vendor library to. In this case we will add the git-subtree repository as a
+                        subdirectory of your already existing git-extensions repository in ~/git-extensions/:
+                    </li>
+                </ul>
+                <pre><code class="language-plaintext hljs">git subtree add --prefix=git-subtree --squash \&lt;Git_repo_link&gt;</code></pre>
+                <ul>
+                    <li>
+                        <strong>pull :</strong> It is similar to pull from the repository with added prefix.<br>Command:
+                    </li>
+                </ul>
+                <pre><code class="language-plaintext hljs">git subtree pull --prefix &lt;URL_link&gt;</code></pre>
+                <p><strong>Git Submodules VS Subtrees</strong></p>
+                <figure class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Git Submodules</th>
+                                <th>Git Subtrees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>It is a link to a commit ref in another repository</td>
+                                <td>Code is merged in the outer repository’s history</td>
+                            </tr>
+                            <tr>
+                                <td>Requires the submodule to be accessible in a server (like GitHub)</td>
+                                <td>Git subtree is decentralised, which basically means that its components are shared
+                                    across a bunch of linked computers.</td>
+                            </tr>
+                            <tr>
+                                <td>Git submodule is a better fit for component-based development, where your main
+                                    project depends on a fixed version of another component (repo).</td>
+                                <td>Git subtree is more like a system-based development, where your all repo contains
+                                    everything at once, and you can modify any part.</td>
+                            </tr>
+                            <tr>
+                                <td>Suitable for smaller repository size</td>
+                                <td>Suitable for bigger repository size</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+            </article>
+        </section>
+        <section class="ibpage-article-header" id="git-commands">
+            <h3>20. Git Commands</h3>
+            <article class="ibpage-article">
+                <p>The following table shows the most commonly used Git Commands:</p>
+                <figure class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>S. No</th>
+                                <th>Command Name&nbsp;</th>
+                                <th>Use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>git init</td>
+                                <td>Initialise a local Git Repository</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>git add.</td>
+                                <td>Add one or more files to the staging area</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>git commit -m “Commit Message”</td>
+                                <td>Commit changes to the head but not to the remote repository.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>git status</td>
+                                <td>Check the status of your current repository and list the files you have changed.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>git log</td>
+                                <td>Provides a list of all commits made on a branch</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>git diff</td>
+                                <td>View the changes you have made to the file</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>git push origin &lt;branch name&gt;</td>
+                                <td>Push the branch to the remote repository so that others can use it.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>git config --global user.name “Name”</td>
+                                <td>Tell Git who you are by configuring the author name</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>git config --global user.email user@email.com &nbsp;</td>
+                                <td>Tell Git who you are by configuring the author email id.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>git clone &lt;repository_name&gt;</td>
+                                <td>Creates a Git repository copy from a remote source</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>git remote add origin &lt;server&gt;</td>
+                                <td>Connect your local repository to the remote server and add the server to be able to
+                                    push it.</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>git branch &lt;branch_name&gt; &nbsp;</td>
+                                <td>Create a new branch</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>git checkout &lt;branch_name&gt;</td>
+                                <td>Switch from one branch to another</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>git merge &lt;branch_name&gt;</td>
+                                <td>Merge the branch into the active branch</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>git rebase</td>
+                                <td>Reapply commits on top of another base tip</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>git checkout -b &lt;branch_name&gt;</td>
+                                <td>Creates a new branch and switch to it</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>git stash</td>
+                                <td>Stash changes into a dirty working directory</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>git pull</td>
+                                <td>Update local repository to the newest commit</td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>git revert &lt;commit_id&gt;</td>
+                                <td>Revert commit changes</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>git clean -n</td>
+                                <td>Shows which files would be removed from working directory. Use the -f flag in place
+                                    of the -n flag to execute the clean.</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>git log --summary</td>
+                                <td>View changes (detailed)</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>git diff HEAD</td>
+                                <td>Show difference between working directory and last commit.</td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>git log --oneline</td>
+                                <td>View changes (briefly)</td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>git reflog</td>
+                                <td>Show a log of changes to the local repository’s HEAD. Add --relative-date flag to
+                                    show date info or --all to show all refs.</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>git rebase -i &lt;base&gt;</td>
+                                <td>Interactively rebase current branch onto &lt;base&gt;. Launches editor to enter
+                                    commands for how each commit will be transferred to the new base.</td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>git restore --staged &lt;file_name&gt;</td>
+                                <td>Resetting a staged file</td>
+                            </tr>
+                            <tr>
+                                <td>27</td>
+                                <td>git rm -r [File_name]</td>
+                                <td>Remove a file (or folder)</td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td>git config --list</td>
+                                <td>List all variables set in config file, along with their values</td>
+                            </tr>
+                            <tr>
+                                <td>29</td>
+                                <td>git branch -d &lt;local_branch&gt; &nbsp;</td>
+                                <td>Delete local branch in Git</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>git push -d &lt;remote_name&gt; &lt;branch_name&gt;</td>
+                                <td>Delete remote branch in Git</td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td>git stash pop</td>
+                                <td>Unstash the changes</td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>git commit -am</td>
+                                <td>The -am along with the command is to write the commit message on the command line
+                                    for already staged files.</td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td>git commit -ammend</td>
+                                <td>The amend is used to edit the last commit. Incase we need to change the last
+                                    committed message, this command can be used.</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>git rm</td>
+                                <td>The git rm command is used to remove or delete files from working tree and index.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td>git pull --rebase</td>
+                                <td>Git rebase is used to rewrite commits from one branch to another branch.</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>git merge --squash</td>
+                                <td>The squash along with git merge produces the working tree. It indexes in the same
+                                    way as that of the real merge, but discards the merge history.</td>
+                            </tr>
+                            <tr>
+                                <td>37</td>
+                                <td>git revert -e &lt;commit_id&gt;</td>
+                                <td>edit the commit mesage before reverting, -e is used for the same.</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>git bisect</td>
+                                <td>Git bisect goes through all the previous commit and uses binary search to find the
+                                    bugged commit.</td>
+                            </tr>
+                            <tr>
+                                <td>39</td>
+                                <td>git blame</td>
+                                <td>git blame is used to know who/which commit is responsible for the lastest changes in
+                                    the repository.</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>git cherry-pick</td>
+                                <td>Choosing a commit from one branch and applying it to another is known as cherry
+                                    picking in Git.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+                <h3>Conclusion</h3>
+                <p>So, we learnt how Git makes managing large software codebases easier, how you can commit changes,
+                    clone the repository, how branches work and many git commands that reduce the burden from the lives
+                    of developers.</p>
+                <p>To test your understanding of Git, some MCQ are provided. Pick the correct option.</p>
+                <p>&nbsp;</p>
+                <p><strong>Important Resources</strong></p>
+                <ul>
+                    <li><a href="https://www.interviewbit.com/blog/git-vs-github/" target="_blank"
+                            rel="noopener noreferrer">Git Vs Github</a></li>
+                    <li><a href="https://www.interviewbit.com/blog/git-commands/" target="_blank"
+                            rel="noopener noreferrer">Git Commands</a></li>
+                    <li><a href="https://www.interviewbit.com/git-interview-questions/" target="_blank"
+                            rel="noopener noreferrer">Git Interview Questions</a></li>
+                </ul>
+            </article>
+        </section>
+
+    </div>
+</article>
+</body>
+
+</html>
